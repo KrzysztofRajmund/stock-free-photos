@@ -1,0 +1,197 @@
+@import './variables';
+
+
+*{
+    box-sizing: border-box;
+    color: $textDark;
+    font-family: $textFont;
+}
+
+
+//intro
+.jumbotron{
+    position: relative;
+    text-align: center;
+    background-image: url("../assets/background-intro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+
+    .jumbotron__container{
+        width:50%;
+
+        h1{
+            font-weight: bold;
+            font-size: 44px;
+            line-height: 56px;
+            letter-spacing: 0.2px;
+            color: $textDark;
+        }
+
+        p{
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: 0.3px;
+            color: $textMediumDark;
+        }
+        p:first-of-type{
+            margin-top: 32px;
+        }
+    }
+}
+
+.jumbotron::after {
+    content:"";
+    background-color: $backgroundColor;
+    opacity: 0.06;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+
+
+//buttons
+    .btn.containedBtn{
+        margin: 24px 0px;
+        padding: 12px 18px;
+        background-color: $backgroundColor;
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.3px;
+        border:none;
+        border-radius: 0px;
+        &:hover{
+            background-color: #3c65b190;
+        }
+        }
+
+    .btn.outlinedBtn{                     
+        margin: 24px 0px;
+        padding: 12px 18px;
+        color: $backgroundColor;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        border-radius: 0px;
+        border:none;
+        box-sizing: border-box;
+        outline: 1px solid $backgroundColor;
+        outline-offset: -1px;
+        &:hover{
+            background-color: #3c65b17d;
+        }
+      
+    }
+
+    .navbar-nav .btn.outlinedBtn{
+        outline: none;
+        outline-offset: 0;
+    }
+   
+
+//nav
+.navbarMain{
+    position: relative;
+    border-bottom: 1px solid #737b7d7d;
+    box-shadow:(0px 55px 2px rgba(255, 255, 255, 0.25));
+
+.navbar-brand{
+    padding-left: 70px;
+}
+
+.navbarMain__nav-buttons {
+    padding-left: 70px;
+}
+
+
+}
+
+
+.navbarMain::after {
+    content: ""; 
+    background: $backgroundColor;
+    opacity: 0.06;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+
+.navbar-collapse{
+    justify-content: center;
+   
+
+}
+
+
+
+.navbarMain__links a{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: $textDark;
+}
+
+
+//feeds
+
+.feedsContainer{
+    text-align: center;
+}
+.feeds-title{
+margin: 32px 0px;
+font-weight: bold;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+letter-spacing: 0.1px;
+color: $textDark;
+}
+
+.card.card-main{
+    margin-bottom:60px;
+    min-height:350px;
+    border:none;
+}
+
+.card-footer img{
+    &:hover{
+        background-color: #373f4139;
+        border-radius: 50%;
+    }
+}
+
+//footer
+.footer{
+    border-bottom: 1px solid #737b7d7d;
+    width:100%;
+    margin: 50px 0px;
+
+}
+
+
+@media  (max-width: 992px) {
+    .navbarMain__links {
+       padding:50px;
+
+       a{
+        padding-left:70px;
+       }
+    
+  }
+
+  .navbarMain .navbarMain__nav-buttons {
+    padding-left: 0px;
+}
+}
